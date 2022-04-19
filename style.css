@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+
+    font-family: 'Karla';
+}
+
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow:hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+}
+@media (max-width: 47rem){
+    body{
+        padding: 5rem 0;
+    }
+}
+@media (max-width: 600px) {
+    body{
+        padding: 4rem 2rem;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 45rem;
+    border-radius: 10px;
+    background-color: white;
+    -webkit-box-shadow: 0px 8px 22px 5px rgba(0,0,0,0.39); 
+    box-shadow: 0px 8px 22px 5px rgba(0,0,0,0.39);
+}
+@media (max-width: 47rem){
+    .card{
+        min-width: 70%;
+    }
+}
+@media (max-width: 600px) {
+    .card{
+        min-width: 100%;
+    }
+}
+
+h2{
+    color: white;
+    font-size: 1.5em;
+}
+@media (max-width: 600px){
+    h2{
+        font-size: 1.2em;
+    }
+}
+
+header{
+    padding: 3.5rem;
+    width: 100%;
+}
+header > h1{
+    font-size: 2em;
+    color: var(--cyan);
+}
+@media (max-width: 600px){
+    header{
+        padding: 2rem;
+    }
+    header > h1{
+        font-size: 1.6em;
+    }
+}
+header > h2{
+    color: var(--bright-yellow);
+    margin-top: 2rem;
+}
+header > p{
+    font-size: 1.2em;
+    color: var(--grayish-blue);
+    margin-top: 1rem;
+}
+@media (max-width: 600px) {
+    header > p{
+        font-size: 0.9em;
+        line-height: 1.4rem;
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 47rem){
+    section{
+        flex-direction: column;
+    }
+}
+
+.sign-up{
+    background-color: var(--cyan);
+    width: 50%;
+    padding: 3.5rem;
+    border-radius: 0 0 0 10px;
+}
+@media (max-width: 47rem){
+    .sign-up{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+@media (max-width: 600px){
+    .sign-up{
+        padding: 2rem;
+    }
+}
+.price-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+.price-container > p{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.486);
+}
+.price-container > .price{
+    color: white;
+    font-size: 2em;
+    margin-right: 1rem;
+    font-weight: 700;
+}
+.sign-up > p{
+    color: white;
+    font-size: 1.3em;
+    margin-top: 0.6rem;
+}
+@media (max-width: 600px){
+    .sign-up > p{
+        font-size: 1.1em;
+    }
+}
+
+.sign-up > button{
+    height: 3rem;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: var(--bright-yellow);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: 700;
+    -webkit-box-shadow: -1px 10px 25px 0px var(--cyan); 
+    box-shadow: -1px 10px 25px 0px rgba(0,0,0,0.41);
+    transition: 0.3s ease;
+    border-radius: 7px;
+}
+.sign-up > button:hover{
+    background-color: hsl(71, 80%, 40%);
+    -webkit-box-shadow: -1px 10px 23px 0px rgba(0,0,0,0.23); 
+    box-shadow: -1px 10px 23px 0px rgba(0,0,0,0.23);
+}
+
+.why-us{
+    background-color: hsl(179, 53%, 50%);
+    width: 50%;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 0 10px 0;
+}
+@media (max-width: 47rem){
+    .why-us{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+@media (max-width: 600px){
+    .why-us{
+        padding: 2rem;
+    }
+}
+
+.texts-whyus > p{
+    color: rgba(255, 255, 255, 0.486);
+    margin-top: 1rem;
+    font-size: 1.1em;
+}
+@media (max-width: 600px){
+    .texts-whyus{
+        font-size: 0.9em;
+    }
+}
+
+footer{
+    margin-top: 5rem;
+    font-size: 1em;
+    font-weight: 400;
+}
+footer > p > a{
+    color: var(--cyan);
+    font-weight: 700;
+    transition: 0.2s;
+}
+footer > p > a:hover{
+    text-decoration: underline;
+    color: rgb(28, 209, 209);
+    font-size: 1.1em;
+}
+@media (max-width: 600px){
+    footer{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
